@@ -28,6 +28,7 @@ namespace MLX90614 {
     //% weight=80 blockGap=8
     export function temperature(temperature_origin: MLX90614_TEMPERATURE_ORIGIN): number {
         let t = read_reg_uint16(temperature_origin);
-		return t * 0.02 - 273.15;
+		//return t * 0.02 - 273.15;
+	    return t;
     }
 }
